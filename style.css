@@ -5,8 +5,8 @@
 }
 .container{
     width: 50%; 
-    height: 70%; 
-    margin: auto;
+    height: 70%;
+   /* margin: auto; */
     background-color: white;
 }
 
@@ -24,7 +24,7 @@ a {
 }
 
 input {
-    width: 100%;
+    width: 97%;
     padding: 12px 5px;
     display: inline-block;
     border-style: none;
@@ -78,4 +78,14 @@ button{
 .required::after{
     content: "*";
     color: red;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  /* using Flex */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
