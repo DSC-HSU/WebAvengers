@@ -1,0 +1,81 @@
+* {
+    font-family:Artifika;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 50%; 
+    height: 70%; 
+    margin: auto;
+    background-color: white;
+}
+
+.uppercaseTitle{
+    text-transform: uppercase;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+a {
+    font-size: x-small;
+}
+
+input {
+    width: 100%;
+    padding: 12px 5px;
+    display: inline-block;
+    border-style: none;
+    background-color: rgb(251,247, 243);
+    border-radius: 5px;
+}
+
+button{
+    width: 100%;
+    background-color: black;
+}
+
+.buttonText{
+    font-size: 8px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.textTwoLine {
+    font-size: x-small;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+.textTwoLine:before,
+.textTwoLine:after {
+    background-color: rgb(231, 227, 227);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+  
+  .textTwoLine:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  
+  .textTwoLine:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
+
+.required::after{
+    content: "*";
+    color: red;
+}
