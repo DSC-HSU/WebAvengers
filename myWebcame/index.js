@@ -9,6 +9,8 @@ button.addEventListener("click", (e) => {
 
 
 // Wowow Callbackssss
+// navigator.getUserMedia is function to assess camera 
+// it has callback when sussesful and errror
 function intiCamera() {
     navigator.getUserMedia({
         video: true
