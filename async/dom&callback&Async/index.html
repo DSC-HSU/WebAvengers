@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="width: 100vw; height: 100vh;display: flex;flex-direction: column;align-items:center">
+        <h1>Server loading img Demo</h1>
+        <img id="imgId" src="./giphy.gif">
+    </div>
+    <script>
+        let url = "./cute_cat.gif"
+        let imgElement = document.querySelector("#imgId")
+
+        function getImgURL(resultCallBack) {
+            let counter = 1
+            let clock = setInterval(() => {
+                console.log(`%ctick ⏰ ${counter}`, 'background: #222; color: white;font-size:30px;font-weight:bold')
+                counter++
+            }, 1000);
+            setTimeout(() => {
+                // just for demo
+                clearInterval(clock)
+                // 
+
+                resultCallBack(url)
+            }, 5000)
+        }
+
+        getImgURL((imgURL) => {
+            imgElement.src = imgURL
+            console.log("%cDone loading", 'background: #222; color: red;font-size:20px')
+        })
+        console.log("%cOps why i ran before getImgURL() function 💁🏻‍♂️", 'background: #222; color: #bada55;font-size:30px')
+    </script>
+</body>
+
+</html>
