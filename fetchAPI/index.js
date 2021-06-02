@@ -1,16 +1,17 @@
 // https://newsapi.org/v2/everything?q=tesla&from=2021-04-20&sortBy=publishedAt&apiKey=7d69af6a24e84117878c358ebffc49e6
 let listOfArticles = null
-const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+const proxyUrl = "https://cors.bridged.cc/"
 
 function getArticles(callback) {
-    fetch(proxyUrl + "https://newsapi.org/v2/everything?q=tesla&from=2021-04-21&sortBy=publishedAt&apiKey=7d69af6a24e84117878c358ebffc49e6", {
+    fetch(proxyUrl + "https://newsapi.org/v2/everything?q=tesla&sortBy=popularity&apiKey=7d69af6a24e84117878c358ebffc49e6", {
         method: "GET",
         mode: 'cors',
         headers: {
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "*",
         }
     }).
         then((data) => data.json()).then(value => {
+            console.log(value)
             const { articles } = value
             // listOfArticles = value.articles
             callback(articles)
