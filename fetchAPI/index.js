@@ -3,7 +3,8 @@ let listOfArticles = null
 const proxyUrl = "https://cors.bridged.cc/"
 
 function getArticles(callback) {
-    fetch(proxyUrl + "https://newsapi.org/v2/everything?q=tesla&sortBy=popularity&apiKey=7d69af6a24e84117878c358ebffc49e6", {
+    let keyword = "covid-19"
+    fetch(proxyUrl + `https://newsapi.org/v2/everything?q=${keyword}&sortBy=popularity&apiKey=7d69af6a24e84117878c358ebffc49e6`, {
         method: "GET",
         mode: 'cors',
         headers: {
@@ -12,16 +13,18 @@ function getArticles(callback) {
     }).
         then((data) => data.json()).then(value => {
             console.log(value)
+            // 16 Line meaning is JS object destructuring
             const { articles } = value
-            // listOfArticles = value.articles
             callback(articles)
 
         })
 }
 
+// [Find Element on HTML Tree which has the #id == container] 
 let container = document.querySelector('#container')
 
 function renderArticles(listOfArticles) {
+    // [Loop] over listOfArticles and create DOM
     for (const iterator of listOfArticles) {
         let articleDetail = document.createElement("div")
         let description = document.createElement("p")
@@ -38,6 +41,8 @@ function renderArticles(listOfArticles) {
         articleDetail.appendChild(originalLink)
 
         container.className = "articleDetail"
+
+        // [Append (DOM above ⏫) to the #container Element]
         container.appendChild(articleDetail)
 
 

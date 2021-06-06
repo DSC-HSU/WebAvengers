@@ -18,16 +18,18 @@
         let imgElement = document.querySelector("#imgId")
 
         function getImgURL(resultCallBack) {
-            // setTimeout(() => {
-            resultCallBack(url)
-            // }, 5000)
+            setTimeout(() => {
+                resultCallBack(url)
+            }, 5000)
         }
 
-        // Synonyms operation
-        getImgURL((imgURL) => {
+        function renderimg(imgURL) {
+            // update dom
             imgElement.src = imgURL
             console.log("haha")
-        })
+        }
+        // Synonyms operation
+        getImgURL(renderimg);
         console.log("%cDone 💁🏻‍♂️", 'background: #222; color: #bada55;font-size:30px')
     </script>
 </body>

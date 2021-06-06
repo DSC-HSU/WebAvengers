@@ -1,17 +1,10 @@
 let numbers = [1, 2, 3, 4, 5, 6]
 
-// function findOne(input, callback) {
-//     for (const iterator of input) {
-//         if (callback(iterator)) {
-//             return iterator
-//         }
-//     }
-// }
 
 function find(input, callback) {
     let result = []
     for (const iterator of input) {
-        if (callback(iterator)) {
+        if (callback(iterator)) { // callback -> Process [] -> true/false
             result.push(iterator)
         }
     }
@@ -25,15 +18,14 @@ function findOd(value) {
 }
 
 
-let resultFindAll = find(numbers, (value) => {
+let reulstDiviedforTwo = find(numbers, (value) => {
     if (value % 2 == 0) {
         return true
     }
 })
 
+console.log(numbers)
 let reusltOdd = find(numbers, findOd)
-console.log(reusltOdd, resultFindAll)
+console.log(reusltOdd)
 
-// nói rõ phạm vi biến
-
-// viết cách thông thường -> có nhiều pp thông thường đó
+console.log(reulstDiviedforTwo)

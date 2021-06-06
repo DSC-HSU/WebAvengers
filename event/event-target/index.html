@@ -19,7 +19,7 @@
     <script>
         // Task make document
 
-        // []
+        // [] Create 16 boxes each has default background as red (goble div tag  css)
         for (let i = 1; i <= 16; i++) {
             const myDiv = document.createElement('div');
             myDiv.innerHTML = i.toString()
@@ -31,20 +31,20 @@
         function random(number) {
             return Math.floor(Math.random() * number);
         }
-        // []
+        // [Helper function to create random RBG]
         function bgChange() {
             const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
             return rndCol;
         }
-        // []
+        // [Find HTML Element by using querySelectorAll on div tag on the HTML Tree]
 
         const divs = document.querySelectorAll('div');
 
-        // []
-
+        // [Result after lookup is 16 Element]
+        // Element[index] - > Đăng ký sự kiện onClick với từng ô
         for (let i = 0; i < divs.length; i++) {
             divs[i].onclick = function (e) {
-                // [] what is e.target
+                // [e.target] geting the reference of that element
                 e.target.style.backgroundColor = bgChange();
             }
         }
