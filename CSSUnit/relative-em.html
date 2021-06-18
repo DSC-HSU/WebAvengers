@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .parent {
+            font-size: 15px;
+        }
+
+        .child {
+            font-size: 2em;
+        }
+    </style>
+    <div class="parent">
+        I'm 15px
+        <div class="child">
+            I'm 30px, as expected
+            <div class="child">
+                I'm 60px, trouble starts!
+                <div class="child">
+                    I'm 120px, now we're really in trouble!
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

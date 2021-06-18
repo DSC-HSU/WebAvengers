@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .html {
+            font-size: 16px;
+        }
+
+        .parent {
+            font-size: 15px;
+        }
+
+        .child-rem {
+            font-size: 2rem;
+        }
+    </style>
+    <div class="parent">
+        I'm 15px
+        <div class="child-rem">
+            I'm 32px, as expected
+            <div class="child-rem">
+                I'm 32px, yep!
+                <div class="child-rem">
+                    I'm 32px, like clockwork!
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+*{
+    font-size: 40px;
+}
+
+.header{
+    background-color: cornflowerblue;
+    min-height: 80px;
+}
+
+.footer{
+    background-color:wheat;
+    min-height: 80px;
+}
+
+.side-bar{
+    float: left;
+    background-color: burlywood;
+    width: 30%;
+    min-height: 300px;
+
+}
+
+.main-content{
+    float: right;
+    width: 70%;
+    background-color:tomato;
+    min-height: 300px;
+}
+
