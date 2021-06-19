@@ -9,25 +9,36 @@
 </head>
 
 <body>
+    <!-- font size of the parent element -->
     <style>
         .parent {
             font-size: 15px;
         }
 
         .child {
+            /* 2 * em (15) => 30 */
+
+            /* 2 * em (30) => 60px*/
             font-size: 2em;
+        }
+
+        .seeMore {
+            font-size: 0.7em;
         }
     </style>
     <div class="parent">
         I'm 15px
         <div class="child">
-            I'm 30px, as expected
-            <div class="child">
+            30px Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s
+            <!-- <div class="child">
                 I'm 60px, trouble starts!
                 <div class="child">
                     I'm 120px, now we're really in trouble!
                 </div>
-            </div>
+            </div> -->
+            <a class="seeMore" href="#">Xem Them</a>
         </div>
     </div>
 
